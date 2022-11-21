@@ -1,0 +1,51 @@
+body{
+background-image: url(https://wallpaperaccess.com/full/1177739.jpg);
+height: 500px;
+width: 100%;
+background-size: cover;
+}
+
+#circle{
+      position: relative;
+      border: 8px solid black;
+      align:center;
+      border-radius:50%;
+      width: 320px;
+	    height: 320px;
+      margin: auto;
+      top: 70px;
+      border-color: white;
+
+}
+#hour, #minute ,#second{
+  position: absolute;
+  background: black;
+}
+#hour{
+  height: 100px;
+  width: 6px;
+  opacity: 0.8;
+  top: 50%;
+  left:50%;
+   transform-origin: top;
+   background-color: red;
+}
+#minute{
+  height: 125px;
+  width: 5px;
+  opacity: 0.8;
+  top: 50%;
+  left:50%;
+  background-color: green;
+   transform-origin: top;
+}
+#second{
+  height: 150px;
+  width: 4px;
+  opacity: 0.8;
+  top: 50%;
+  left:50%;
+  background-color: yellow;
+   transform-origin: top;
+
+}
