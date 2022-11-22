@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Update CSS variable with JS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <h1>Update CS variable with <span class ="hl">JS</span></h1>
+
+          <div class="controls">
+              <label for="spacing">Spacing</label>
+              <input type="range"   name="spacing" value="" min="10" max="200" data-sizing="px">
+
+              <label for="blur">Blur</label>
+              <input type="range" name="blur"  value="" min="0" max="25" data-sizing="px">
+
+              <label for="base">Base-Color</label>
+              <input type="color" name="base"  value="red" >
+
+          </div>
+          <br>
+
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZyDVh5mINPNg2_57dAvEkX0FK7EpF-fOtYQ&usqp=CAU">
+
+     <script>
+
+            const inputs=document.querySelectorAll('.controls input');
+
+            function handleUpdate(){
+              const suffix= this.dataset.sizing || ''; //for color there is no unit therefore there's no size there
+              console.log(suffix);
+              document.documentElement.style.setProperty( `--${this.name}`, this.value+suffix);
+            }
+
+            inputs.forEach(input => input.addEventListener( 'change', handleUpdate ) );
+            inputs.forEach(input => input.addEventListener( 'mousemove', handleUpdate ) );
+
+     </script>
+
+  </body>
+</html>
